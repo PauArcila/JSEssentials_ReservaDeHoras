@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafío I - Formulario de Validación</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-info">
+    <div class="container mt-2 p-1">
+        <h1 id="titulo1" class="py-1">Reserva de Horas</h1>
+        
+        <form method="post" id="formulario" class="form-register col-sm-10 col-md-8 col-lg-6" onsubmit="reset();"><!--cambiar por event listener-->
+            <div class="contenedor-inputs">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                       <input id="nombre" type="text" class="form-control font-weight-light" name="nombre" placeholder="Nombre" > 
+                   </div>
+                   <div class="form-group col-md-6">
+                    <input type="text" id="apellidos" class="col form-control font-weight-light" name="apellidos" placeholder="Apellidos">
+                </div>             
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" id="rut" class="form-control font-weight-light" name="rut" placeholder=" Rut (Ej.: 01222333-K)" >
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" id="edad" class="form-control font-weight-light" name="edad" placeholder="Edad (Ej.: 18)" >
+                </div>
+            </div>           
+
+            <div class="mb-4">
+                <input type="email" id="correo" class="form-control font-weight-light" name="correo" placeholder="Correo">
+            </div>
+                 
+         <div class="input-group mb-4">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Especialidad</label>
+            </div>
+            <select id="especialidades" class="custom-select">
+                <option value="1">Dermatología</option>
+                <option value="2">Medicina General</option>
+                <option value="3">Odontología</option>
+                <option value="4">Traumatología</option>                    
+            </select>
+        </div>
+
+        <div class="form-row">
+                <div class="input-group mb-4 col-md-6">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect02">Fecha</label>
+                    </div>
+                    <input id="fecha" type="text" class="form-control" placeholder="dd-mm-aaaa">
+                </div>
+
+                <div class="input-group mb-4 col-md-6">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect03">Hora</label>
+                    </div>
+                    <select id="horas" class="custom-select">
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>                    
+                    </select>
+                </div>    
+        </div>
+       
+    </div>
+
+
+    <div class="form-group row px-3 my-1">
+        <button id="reservar" type="button" class="btn btn-info btn-block disabled">
+        Reservar</button>
+    </div>
+
+</div>
+</form> 
+</div>
+
+<script type="text/javascript" src="validar.js"></script> 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+</body>
+</html>
